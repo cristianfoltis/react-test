@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import HomePage from './containers/HomePage/HomePage';
 import Cartoons from './containers/Cartoons/Cartoons';
-import CreateCartoons from './containers/CreateCartoons/CreateCartoons';
+import CartoonForm from './containers/CartoonForm/CartoonForm';
 
 function App() {
   return (
@@ -10,7 +10,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cartoons" element={<Cartoons />} />
-        <Route path="/create-cartoon" element={<CreateCartoons />} />
+        <Route path="/cartoons/create-cartoon" element={<CartoonForm />} />
+        <Route path="/edit-cartoon" element={<CartoonForm />} />
       </Routes>
     </BrowserRouter>
   );
