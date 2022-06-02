@@ -17,8 +17,11 @@ function BreadcrumbsComponent() {
         Homepage
       </Link>
       {pathArray.map((path, i) => {
+        const last = i === pathArray.length - 1;
+        const to = `/${pathArray.slice(0, i + 1).join('/')}`;
+
         return (
-          <Link key={i} underline="hover" color="inherit" href={`/${path}`}>
+          <Link key={i} underline="hover" color="inherit" href={`${to}`}>
             {path}
           </Link>
         );
@@ -26,6 +29,7 @@ function BreadcrumbsComponent() {
     </Breadcrumbs>
   );
 }
-//breadcrumbs tutorial
-//fix this
+
 export default BreadcrumbsComponent;
+
+

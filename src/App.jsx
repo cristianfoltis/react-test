@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/cartoons" element={<Cartoons />} />
         <Route path="/cartoons/create-cartoon" element={<CartoonForm />} />
-        <Route path="/edit-cartoon" element={<CartoonForm />} />
+        <Route path="/cartoons/edit-cartoon" element={<CartoonForm />} />
       </Routes>
     </BrowserRouter>
   );

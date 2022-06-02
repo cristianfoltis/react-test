@@ -18,14 +18,14 @@ function CartoonForm() {
   const [title, setTitle] = useState('Create Cartoons');
 
   useEffect(() => {
-    if (location.pathname !== '/edit-cartoon') {
+    if (location.pathname !== '/cartoons/edit-cartoon') {
       const newTitle = `Create Cartoon  ${formData.name}`;
       setTitle(newTitle);
     }
   }, [formData.name, location.pathname]);
 
   useEffect(() => {
-    if (location.pathname === '/edit-cartoon') {
+    if (location.pathname === '/cartoons/edit-cartoon') {
       setTitle('Edit Cartoon');
       const cartoon = JSON.parse(window.localStorage.getItem('currentCartoon'));
       if (cartoon === null) {

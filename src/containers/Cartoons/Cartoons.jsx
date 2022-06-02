@@ -73,7 +73,7 @@ function Cartoons() {
       'currentCartoon',
       JSON.stringify({ title: title, image: image, description: description }),
     );
-    navigate('/edit-cartoon');
+    navigate('/cartoons/edit-cartoon');
   };
 
   return (
